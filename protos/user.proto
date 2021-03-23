@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package protos;
+
+service User
+{
+  rpc SubmitData(UserDataRequest) returns (ServerResponse) {}
+}
+
+message UserDataRequest
+{
+  string name = 1;
+  string cnp = 2;
+}
+
+message ServerResponse
+{
+  string response = 1;
+}
